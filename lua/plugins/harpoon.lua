@@ -8,10 +8,11 @@ return {
 	vim.keymap.set("n", "<leader>a", mark.add_file)
 	vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
-	vim.keymap.set("n", "g1", function() ui.nav_file(1) end)
-	vim.keymap.set("n", "g2", function() ui.nav_file(2) end)
-	vim.keymap.set("n", "g3", function() ui.nav_file(3) end)
-	vim.keymap.set("n", "g4", function() ui.nav_file(4) end)
+        local keys = {1,2,3,4,5,6,7,8,9,0}
+
+        for i, num in pairs(keys) do
+	    vim.keymap.set("n", "g"..num, function() ui.nav_file(num) end)
+        end
     end
 
 }

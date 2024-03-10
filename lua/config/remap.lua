@@ -27,5 +27,13 @@ vim.keymap.set("n", "<leader>h", "<C-w>s")
 vim.keymap.set("n", "<leader>v", "<C-w>v")
 
 
+--- idk what to call this ----
+vim.keymap.set("n", "<Esc>", "<cmd> noh <CR>")  -- clear seach
+vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>")  -- coppy whole file
+
+
 ----------- lsp --------------
 vim.keymap.set("n", "lf", vim.diagnostic.open_float)
+
+vim.keymap.set("n", "fm", function() vim.lsp.buf.format { async = true } end)
+vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
