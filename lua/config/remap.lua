@@ -37,3 +37,6 @@ vim.keymap.set("n", "lf", vim.diagnostic.open_float)
 
 vim.keymap.set("n", "fm", function() vim.lsp.buf.format { async = true } end)
 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
+
+
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)

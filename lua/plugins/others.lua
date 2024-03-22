@@ -1,12 +1,12 @@
 return {
 
-    {
+        {
         'stevearc/oil.nvim',
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons" },
 
-        config = function() 
-            vim.keymap.set("n", "<C-n>", ":Oil<CR>", { silent = true } )
+        config = function()
+            vim.keymap.set("n", "<C-n>", ":Oil<CR>", { silent = true })
 
             require("oil").setup({
                 default_file_explorer = true,
@@ -17,7 +17,6 @@ return {
 
                 keymaps = {
                     ["<CR>"] = "actions.select",
-
                 },
             })
         end
@@ -34,11 +33,10 @@ return {
         end
     },
 
-
     {
-        "voldikss/vim-floaterm", 
+        "voldikss/vim-floaterm",
 
-        config = function() 
+        config = function()
             vim.g.floaterm_autoclose = 1
             vim.g.floaterm_title = ""
             vim.g.floaterm_borderchars = "─│─│╭╮╯╰"
@@ -48,26 +46,25 @@ return {
         end,
     },
 
-
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         event = "VeryLazy",
 
-        config = function() 
+        config = function()
             require('lualine').setup {
                 options = {
                     icons_enabled = false,
-                    theme = 'auto',
+                    theme = require("config/lua-line").theme(),
                 },
                 sections = {
                     lualine_a = {},
-                    lualine_b = {"filename", 'diagnostics'},
+                    lualine_b = { "filename", 'diagnostics' },
                     lualine_c = {},
                     lualine_x = {},
-                    lualine_y = {'progress','location'},
+                    lualine_y = { 'progress', 'location' },
                     lualine_z = {}
-                  },
+                },
             }
         end
     },
