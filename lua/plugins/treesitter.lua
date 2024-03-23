@@ -5,7 +5,7 @@ return {
     config = function() 
 
 	require'nvim-treesitter.configs'.setup {
-	    ensure_installed = { "c", "lua", "rust", "cpp", "c_sharp" },
+	    ensure_installed = { "c", "lua", "rust", "cpp", "c_sharp", "luau" },
 	    sync_install = true,
 	    auto_install = true,
 
