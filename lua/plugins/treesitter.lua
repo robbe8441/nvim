@@ -5,14 +5,14 @@ return {
     config = function() 
 
 	require'nvim-treesitter.configs'.setup {
-	    ensure_installed = { "c", "lua", "rust", "cpp", "c_sharp", "luau" },
+	    ensure_installed = { "lua", "rust" },
 	    sync_install = true,
 	    auto_install = true,
 
 	    highlight = {
-	    enable = true,
-	    additional_vim_regex_highlighting = false
-	},
+                enable = true,
+                additional_vim_regex_highlighting = false
+	    },
     }
     end
 }
