@@ -7,3 +7,5 @@ vim.cmd("hi TelescopePromptPrefix guifg=#a5b0c5")
 
 vim.cmd("hi FloatermBorder guibg=none")
 vim.cmd("hi FloatermBorder guifg=none")
+
+vim.cmd("highlight SpelunkerSpellBad cterm=underline ctermfg=247 gui=underline guibg=#852828");

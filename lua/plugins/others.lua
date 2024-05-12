@@ -1,6 +1,16 @@
 return {
 
     {
+        'numToStr/Comment.nvim',
+        opts = {
+
+        },
+        lazy = false,
+        config = function() 
+            require('Comment').setup()
+        end
+    },
+    {
         'stevearc/oil.nvim',
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons" },

@@ -1,4 +1,3 @@
-
 vim.keymap.set("n", "<C-s>", ":w<CR>")
 --vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -39,4 +38,7 @@ vim.keymap.set("n", "fm", function() vim.lsp.buf.format { async = true } end)
 vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
 
 
-vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader>x", "<cmd> bd <CR>")
+
+
+
