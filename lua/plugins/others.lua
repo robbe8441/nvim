@@ -69,10 +69,10 @@ return {
                 },
                 sections = {
                     lualine_a = {},
-                    lualine_b = { "filename", 'diagnostics' },
+                    lualine_b = { "filename" },
                     lualine_c = {},
                     lualine_x = {},
-                    lualine_y = { 'progress', 'location' },
+                    lualine_y = {},
                     lualine_z = {}
                 },
             }

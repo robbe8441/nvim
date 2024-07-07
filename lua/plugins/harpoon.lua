@@ -14,5 +14,4 @@ return {
 	    vim.keymap.set("n", "g"..num, function() ui.nav_file(num) end)
         end
     end
-
 }
