@@ -9,8 +9,6 @@ backend
 nanos
 framebuffer
 framebuffers
-framebuffers
-framebuffers
 vulkan
 shader
 multisample
@@ -35,8 +33,6 @@ samplerless
 utexture
 bvec
 inout
-badmath
 cmake
 rustc
-lateout
 TODO
