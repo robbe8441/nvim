@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
     vim.fn.system({
         "git",
         "clone",
@@ -17,7 +17,7 @@ require("lazy").setup("plugins")
 require("config")
 
 
-local undodir = vim.fn.expand("~") .. "/.config/nvim/undo"
+local undodir = vim.fn.expand("~") .. "/.config/nvim/undo" -- change if on windows
 
 if vim.fn.isdirectory(undodir) == 0 then
     vim.fn.mkdir(undodir, "p")
@@ -27,3 +27,6 @@ vim.opt.undofile = true
 vim.opt.undodir = undodir
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000
+
+vim.cmd("set spell spelllang=en_us");
+
