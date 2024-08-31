@@ -9,10 +9,14 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- use windows clipbord ---
+-- use system clipbord ---
 vim.keymap.set("v", "y", "\"+y")
 vim.keymap.set("v", "y", "\"+y")
 vim.keymap.set("n", "Y", "\"+Y")
+
+-- macros --
+vim.keymap.set("n", "Q", "@qj");
+vim.keymap.set("x", "Q", ":norm @q<CR>");
 
 
 
@@ -28,8 +32,6 @@ vim.keymap.set("n", "<leader>v", "<C-w>v")
 
 --- idk what to call this ----
 vim.keymap.set("n", "<Esc>", "<cmd> noh <CR>")  -- clear seach
-vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>")  -- coppy whole file
-
 
 ----------- lsp --------------
 vim.keymap.set("n", "lf", vim.diagnostic.open_float)
@@ -40,5 +42,8 @@ vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
 
 vim.keymap.set("n", "<leader>x", "<cmd> bd <CR>")
 
-
+vim.api.nvim_create_user_command("Cls", function ()
+    vim.cmd("wa")
+    vim.cmd("silent! %bd|e#")
+end, {})
 

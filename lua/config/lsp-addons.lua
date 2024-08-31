@@ -1,5 +1,6 @@
 
-require'nvim-treesitter.configs'.setup {
+
+require 'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true
     },
@@ -14,8 +15,7 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
+
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldlevelstart = 99
-
-
